@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>복아윤 ♡ 권도윤</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+
+  <style>
+
+    /* =========================
+       기본 색상
+    ========================= */
+
+    :root {
+      --pink: #ff8fab;
+      --dark-pink: #ed6688;
+      --light-pink: #fff0f5;
+      --border-pink: #ffcbd8;
+
+      --text: #66545a;
+      --sub-text: #a18c93;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+
+      background: #ffffff;
+
+      color: var(--text);
+
+      font-family: "Gowun Dodum", sans-serif;
+
+      overflow-x: hidden;
+
+      /* 전체 중앙 정렬 */
+      text-align: center;
+    }
+
+
+    /* =========================
+       은은한 점선 격자
+    ========================= */
+
+    body::before {
+      content: "";
+
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      z-index: -1;
+
+      background-image:
+        radial-gradient(
+          circle,
+          rgba(255, 143, 171, 0.28) 1px,
+          transparent 1px
+        );
+
+      background-size: 18px 18px;
+
+      opacity: 0.45;
+    }
+
+
+    /* =========================
+       전체 컨테이너
+    ========================= */
+
+    .container {
+      width: min(900px, 90%);
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       스티커
+    ========================= */
+
+    .sticker {
+      position: absolute;
+
+      user-select: none;
+
+      pointer-events: none;
+
+      z-index: 5;
+    }
+
+
+    .heart {
+      color: var(--pink);
+
+      font-size: 48px;
+
+      font-family: sans-serif;
+    }
+
+
+    .heart::before {
+      content: "♡";
+    }
+
+
+    .heart1 {
+      top: 45px;
+      left: 7%;
+
+      transform: rotate(-15deg);
+    }
+
+
+    .heart2 {
+      top: 150px;
+      right: 9%;
+
+      font-size: 30px;
+
+      transform: rotate(15deg);
+    }
+
+
+    .heart3 {
+      bottom: 80px;
+      left: 9%;
+
+      font-size: 34px;
+
+      transform: rotate(-10deg);
+    }
+
+
+    .heart4 {
+      bottom: 45px;
+      right: 7%;
+
+      font-size: 55px;
+
+      transform: rotate(12deg);
+    }
+
+
+    .ribbon {
+      font-size: 48px;
+    }
+
+
+    .ribbon1 {
+      top: 65px;
+      right: 18%;
+
+      transform: rotate(10deg);
+    }
+
+
+    .ribbon2 {
+      bottom: 80px;
+      left: 18%;
+
+      transform: rotate(-10deg);
+    }
+
+
+    /* =========================
+       첫 화면
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      position: relative;
+
+      padding: 50px 0;
+    }
+
+
+    .hero-box {
+      width: 100%;
+
+      max-width: 720px;
+
+      padding: 60px 25px;
+
+      background: rgba(255, 255, 255, 0.95);
+
+      border: 2px solid var(--border-pink);
+
+      border-radius: 35px;
+
+      box-shadow:
+        0 15px 45px rgba(255, 143, 171, 0.12);
+
+      position: relative;
+    }
+
+
+    .small-title {
+      color: var(--pink);
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      letter-spacing: 4px;
+    }
+
+
+    .hero-heart {
+      color: var(--pink);
+
+      font-size: 27px;
+
+      margin: 15px 0;
+    }
+
+
+    h1 {
+      margin: 0;
+
+      color: var(--dark-pink);
+
+      font-family: "Gaegu", cursive;
+
+      font-size: clamp(60px, 10vw, 90px);
+
+      line-height: 1;
+    }
+
+
+    .subtitle {
+      margin-top: 20px;
+
+      color: var(--sub-text);
+
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       D-Day
+    ========================= */
+
+    .dday-box {
+      display: inline-block;
+
+      margin-top: 30px;
+
+      padding: 14px 30px;
+
+      background: var(--light-pink);
+
+      border: 2px dashed var(--pink);
+
+      border-radius: 50px;
+
+      color: var(--dark-pink);
+
+      font-size: 24px;
+
+      font-weight: bold;
+    }
+
+
+    .start-date {
+      margin-top: 10px;
+
+      color: var(--sub-text);
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       섹션
+    ========================= */
+
+    .section {
+      padding: 80px 0;
+    }
+
+
+    .section-title {
+      margin-bottom: 35px;
+
+      color: var(--dark-pink);
+
+      font-family: "Gaegu", cursive;
+
+      font-size: 48px;
+
+      line-height: 1.1;
+    }
+
+
+    .section-title small {
+      display: block;
+
+      margin-top: 8px;
+
+      color: var(--sub-text);
+
+      font-family: "Gowun Dodum", sans-serif;
+
+      font-size: 14px;
+
+      font-weight: normal;
+    }
+
+
+    /* =========================
+       프로필 카드
+    ========================= */
+
+    .profiles {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 22px;
+    }
+
+
+    .profile-card {
+      background: #ffffff;
+
+      border: 2px solid var(--border-pink);
+
+      border-radius: 28px;
+
+      padding: 32px 25px;
+
+      position: relative;
+
+      box-shadow:
+        0 10px 30px rgba(255, 143, 171, 0.08);
+
+      transition: 0.25s;
+    }
+
+
+    .profile-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow:
+        0 15px 35px rgba(255, 143, 171, 0.15);
+    }
+
+
+    .profile-number {
+      color: var(--pink);
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+    }
+
+
+    .profile-name {
+      margin: 5px 0 12px;
+
+      color: var(--dark-pink);
+
+      font-family: "Gaegu", cursive;
+
+      font-size: 48px;
+
+      font-weight: bold;
+    }
+
+
+    .profile-tag {
+      display: inline-block;
+
+      margin-bottom: 25px;
+
+      padding: 6px 15px;
+
+      background: var(--light-pink);
+
+      color: var(--dark-pink);
+
+      border-radius: 30px;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       프로필 정보
+    ========================= */
+
+    .profile-info {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 16px;
+    }
+
+
+    .info-row {
+      width: 100%;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 3px;
+    }
+
+
+    .info-label {
+      color: var(--pink);
+
+      font-size: 13px;
+
+      font-weight: bold;
+    }
+
+
+    .info-value {
+      color: var(--text);
+
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       한마디 강조
+    ========================= */
+
+    .message-box {
+      margin-top: 8px;
+
+      padding: 13px 20px;
+
+      background: var(--very-light-pink, #fff8fa);
+
+      border: 1px dashed var(--border-pink);
+
+      border-radius: 18px;
+
+      color: var(--dark-pink);
+
+      font-weight: bold;
+
+      display: inline-block;
+    }
+
+
+    /* =========================
+       우리의 이야기
+    ========================= */
+
+    .love-note {
+      background: #ffffff;
+
+      border: 2px dashed var(--border-pink);
+
+      border-radius: 28px;
+
+      padding: 40px 25px;
+
+      position: relative;
+
+      box-shadow:
+        0 10px 25px rgba(255, 143, 171, 0.06);
+    }
+
+
+    .love-note h2 {
+      margin: 0 0 15px;
+
+      color: var(--dark-pink);
+
+      font-family: "Gaegu", cursive;
+
+      font-size: 40px;
+    }
+
+
+    .love-note p {
+      margin: 0;
+
+      color: var(--sub-text);
+
+      line-height: 2;
+    }
+
+
+    .mini-hearts {
+      margin-top: 22px;
+
+      color: var(--pink);
+
+      letter-spacing: 10px;
+
+      font-size: 18px;
+    }
+
+
+    /* =========================
+       푸터
+    ========================= */
+
+    footer {
+      padding: 35px 0 60px;
+
+      color: #c4aab2;
+
+      font-size: 13px;
+    }
+
+
+    footer .footer-heart {
+      margin-bottom: 8px;
+
+      color: var(--pink);
+
+      font-size: 25px;
+    }
+
+
+    /* =========================
+       모바일
+    ========================= */
+
+    @media (max-width: 650px) {
+
+      .profiles {
+        grid-template-columns: 1fr;
+      }
+
+
+      .hero-box {
+        padding: 50px 18px;
+      }
+
+
+      h1 {
+        font-size: 65px;
+      }
+
+
+      .heart1 {
+        left: 1%;
+      }
+
+
+      .heart4 {
+        right: 1%;
+      }
+
+
+      .ribbon1 {
+        right: 3%;
+      }
+
+
+      .ribbon2 {
+        left: 3%;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================
+       장식 스티커
+  ====================================== -->
+
+  <div class="sticker heart heart1"></div>
+
+  <div class="sticker heart heart2"></div>
+
+  <div class="sticker heart heart3"></div>
+
+  <div class="sticker heart heart4"></div>
+
+  <div class="sticker ribbon ribbon1">
+    🎀
+  </div>
+
+  <div class="sticker ribbon ribbon2">
+    🎀
+  </div>
+
+
+
+  <!-- =====================================
+       첫 화면
+  ====================================== -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-box">
+
+        <div class="small-title">
+          OUR LOVE STORY
+        </div>
+
+
+        <div class="hero-heart">
+          ♡　♥　♡
+        </div>
+
+
+        <h1>
+          복아윤 ♡ 권도윤
+        </h1>
+
+
+        <div class="subtitle">
+          우리의 귀엽고 소중한 이야기
+        </div>
+
+
+        <!-- D-Day -->
+
+        <div class="dday-box">
+
+          💗
+
+          <span id="dday">
+            D+0
+          </span>
+
+        </div>
+
+
+        <div class="start-date">
+
+          우리가 만난 날 ·
+
+          <span id="startDateText"></span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================
+       프로필
+  ====================================== -->
+
+  <section class="section">
+
+    <div class="container">
+
+
+      <h2 class="section-title">
+
+        ABOUT US
+
+        <small>
+          ♡ 서로를 소개합니다 ♡
+        </small>
+
+      </h2>
+
+
+
+      <div class="profiles">
+
+
+        <!-- ================================
+             복아윤
+        ================================= -->
+
+        <div class="profile-card">
+
+          <div class="profile-number">
+            ABOUT 01 ♡
+          </div>
+
+
+          <div class="profile-name">
+            복아윤
+          </div>
+
+
+          <div class="profile-tag">
+            MY PERSON 💗
+          </div>
+
+
+          <div class="profile-info">
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                나이
+              </div>
+
+              <div class="info-value">
+                19세
+              </div>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                키
+              </div>
+
+              <div class="info-value">
+                186cm
+              </div>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                특징
+              </div>
+
+              <div class="info-value">
+                물복
+              </div>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                한마디
+              </div>
+
+              <div class="message-box">
+                ㅋㅋ말랑배
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================================
+             권도윤
+        ================================= -->
+
+        <div class="profile-card">
+
+          <div class="profile-number">
+            ABOUT 02 ♡
+          </div>
+
+
+          <div class="profile-name">
+            권도윤
+          </div>
+
+
+          <div class="profile-tag">
+            MY LOVE 💗
+          </div>
+
+
+          <div class="profile-info">
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                나이
+              </div>
+
+              <div class="info-value">
+                17세
+              </div>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                키
+              </div>
+
+              <div class="info-value">
+                181cm
+              </div>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                특징
+              </div>
+
+              <div class="info-value">
+                안경잡이
+              </div>
+
+            </div>
+
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                한마디
+              </div>
+
+              <div class="message-box">
+                형 (ㅡ.ㅡ;)
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================
+       우리의 이야기
+  ====================================== -->
+
+  <section class="section">
+
+    <div class="container">
+
+
+      <div class="love-note">
+
+        <div
+          class="sticker heart"
+          style="
+            top:-25px;
+            left:8%;
+            font-size:40px;
+          "
+        ></div>
+
+
+        <div
+          class="sticker"
+          style="
+            top:-25px;
+            right:8%;
+            font-size:40px;
+          "
+        >
+          🎀
+        </div>
+
+
+        <h2>
+          우리의 작은 기록 ♡
+        </h2>
+
+
+        <p>
+          오늘도 함께라서 행복해.<br>
+          별거 아닌 하루도 너와 함께라면 특별해지는 것처럼,<br>
+          앞으로도 예쁜 추억 많이 만들자.
+        </p>
+
+
+        <div class="mini-hearts">
+          ♥ ♥ ♥ ♥ ♥
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================
+       푸터
+  ====================================== -->
+
+  <footer>
+
+    <div class="footer-heart">
+      ♡
+    </div>
+
+    복아윤 ♡ 권도윤
+
+    <br>
+
+    Always together.
+
+  </footer>
+
+
+
+  <!-- =====================================
+       D-DAY SCRIPT
+  ====================================== -->
+
+  <script>
+
+
+    /*
+    ==================================================
+    💗 연애 시작 날짜
+
+    이 날짜만 실제 연애 시작일로 바꿔주세요.
+
+    예:
+    2025년 8월 15일
+    → "2025-08-15"
+
+    ==================================================
+    */
+
+    const START_DATE = "2026-01-01";
+
+
+
+    /* 시작 날짜 표시 */
+
+    document.getElementById("startDateText").textContent =
+      START_DATE.replaceAll("-", ". ");
+
+
+
+    /*
+    ==================================================
+    D-Day 계산
+
+    매일 자정이 지나면 날짜를 다시 계산합니다.
+    ==================================================
+    */
+
+    function updateDDay() {
+
+      const startDate =
+        new Date(START_DATE + "T00:00:00");
+
+
+      const now =
+        new Date();
+
+
+      /*
+      오늘 날짜의 00:00:00
+      */
+
+      const today =
+        new Date(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate()
+        );
+
+
+      /*
+      두 날짜의 차이를 계산
+      */
+
+      const difference =
+        today.getTime() -
+        startDate.getTime();
+
+
+      const days =
+        Math.floor(
+          difference /
+          (1000 * 60 * 60 * 24)
+        );
+
+
+      const dday =
+        document.getElementById("dday");
+
+
+      /*
+      연애 시작일 이후라면 D+
+      */
+
+      if (days >= 0) {
+
+        dday.textContent =
+          "D+" + days;
+
+      }
+
+
+      /*
+      아직 시작하지 않은 날짜라면 D-
+      */
+
+      else {
+
+        dday.textContent =
+          "D" + days;
+
+      }
+
+    }
+
+
+
+    /*
+    페이지가 열리자마자 실행
+    */
+
+    updateDDay();
+
+
+
+    /*
+    1분마다 날짜를 확인
+
+    자정이 지나면 자동으로 D-Day 변경
+    */
+
+    setInterval(
+      updateDDay,
+      60 * 1000
+    );
+
+
+  </script>
+
+
+</body>
+</html>
